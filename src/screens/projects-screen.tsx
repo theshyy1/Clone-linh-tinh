@@ -6,7 +6,7 @@ import { ProjectProvider } from "../contexts/project/list-project-context";
 export const ProjectScreen = () => {
   return (
     <ProjectProvider>
-      <div className="bg-background-light relative h-full p-[18px] pb-[29px]">
+      <div className="bg-white relative h-full p-[18px] pb-[29px]">
         <AdvancedProjectContainer />
         <CreateProjectContainer />
         <ListProjectContainer />

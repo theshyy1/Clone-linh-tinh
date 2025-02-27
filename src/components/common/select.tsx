@@ -5,7 +5,7 @@ interface SelectOptionType {
 
 interface IProps {
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  value: string;
+  value: number | string;
   name: string;
   id?: string;
   placeholder?: string;
@@ -27,7 +27,7 @@ export const Select = ({
       name={name}
       value={value}
       id={id}
-      className={`text-text-light/90 bg-background-light border-text-light peer block w-full appearance-none border-0 border-b-2 px-0 py-2.5 text-sm focus:outline-none focus:ring-0 ${classname}`}
+      className={`text-text-light/90 bg-transparent border-text-light peer block w-full appearance-none border-0 border-b-2 px-0 py-2.5 text-sm focus:outline-none focus:ring-0 ${classname}`}
       onChange={onChange}
     >
       <option disabled>{placeholder}</option>

@@ -13,5 +13,5 @@ export interface FormValues {
   manager: string;
   date: string;
   status: string;
-  progress: string;
+  progress: number;
 }

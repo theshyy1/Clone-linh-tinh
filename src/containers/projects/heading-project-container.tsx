@@ -1,5 +1,5 @@
-import { mdiSwapVertical } from "@mdi/js";
 import Icon from "@mdi/react";
+import { mdiSwapVertical } from "@mdi/js";
 import { IProject } from "../../models/project-model";
 
 interface IProps {
@@ -8,29 +8,33 @@ interface IProps {
 
 export const HeadingListContainer = ({ handleSortProject }: IProps) => {
   return (
-    <div className="border-text-light flex w-full justify-around border-b-2 pb-2.5 pt-6">
-      <p className="flex-grow font-bold">Name</p>
-      <p className="w-[15%] text-left font-bold">Project manager</p>
-      <p
-        className="w-[15%] justify-center flex font-bold hover:opacity-55"
+    <div className="bg-[#f8fafd] border flex w-full justify-around py-3 mt-6">
+      <span className="cursor-pointer flex-grow font-bold">Name</span>
+      <span className="cursor-pointer w-[15%] text-left font-bold">
+        Project manager
+      </span>
+      <span
+        className="cursor-pointer w-[15%] justify-center flex font-bold hover:opacity-55"
         onClick={() => handleSortProject("date")}
       >
         Due date {<Icon path={mdiSwapVertical} size={1} />}
-      </p>
+      </span>
 
-      <p
-        className="w-[15%] justify-center flex font-bold hover:opacity-55"
+      <span
+        className="cursor-pointer w-[15%] justify-center flex font-bold hover:opacity-55"
         onClick={() => handleSortProject("status")}
       >
         Status {<Icon path={mdiSwapVertical} size={1} />}
-      </p>
-      <p
-        className="flex w-[15%] justify-end font-bold  hover:opacity-55"
+      </span>
+      <span
+        className="cursor-pointer flex w-[15%] justify-end font-bold hover:opacity-55"
         onClick={() => handleSortProject("progress")}
       >
         Progress {<Icon path={mdiSwapVertical} size={1} />}
-      </p>
-      <p className="w-[15%] pl-12 text-center font-bold">Action</p>
+      </span>
+      <span className="cursor-pointer w-[15%] pl-12 text-center font-bold">
+        Action
+      </span>
     </div>
   );
 };

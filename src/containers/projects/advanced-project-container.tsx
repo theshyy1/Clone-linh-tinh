@@ -1,6 +1,6 @@
-import { mdiMinus, mdiPlus } from "@mdi/js";
-import Icon from "@mdi/react";
 import React, { useContext, useState } from "react";
+import Icon from "@mdi/react";
+import { mdiMinus, mdiPlus } from "@mdi/js";
 import { getUniqueValues, removeAccents } from "../../common/common";
 import { Dropdown } from "../../components/common/Dropdown";
 import { Button } from "../../components/common/button";
@@ -48,21 +48,14 @@ export const AdvancedProjectContainer = () => {
   };
 
   const projectStatus = getUniqueValues(allProjects, "status");
-
   return (
     <div className="flex items-center justify-between">
       <span className="text-base font-semibold">Project Summary</span>
       <div className="flex items-center space-x-2">
         <Button
           onClick={() => setOpenForm((prev) => !prev)}
-          className="bg-white px-10 text-black rounded-full font-semibold mr-2"
-          icon={
-            isOpenForm ? (
-              <Icon path={mdiMinus} size={1} />
-            ) : (
-              <Icon path={mdiPlus} size={1} />
-            )
-          }
+          className="bg-gray-300/50 px-10 text-black rounded mr-2"
+          icon={<Icon path={isOpenForm ? mdiMinus : mdiPlus} size={0.8} />}
         >
           {isOpenForm ? "Close" : "New project"}
         </Button>
@@ -73,13 +66,14 @@ export const AdvancedProjectContainer = () => {
           onChange={(event) => setSearchValue(event.target.value)}
           placeholder="Enter a manager ..."
           onKeyDown={handleSearchEnter}
-          className="flex items-center rounded-full bg-white px-[14px] py-[9px] text-sm outline-none hover:opacity-60"
+          className="flex items-center border-b border-black bg-transparent px-[14px] py-[9px] text-sm outline-none hover:opacity-60"
         />
         <Dropdown
           label="Status"
           field="status"
           fieldItems={projectStatus}
           filters={handleFilterBySelect}
+          classnames="bg-gray-300/50 rounded"
         />
       </div>
     </div>

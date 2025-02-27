@@ -5,15 +5,22 @@ interface IProps {
   fieldItems?: (string | number)[];
   field?: keyof IProject;
   filters?: (field: keyof IProject, value: string) => void;
+  classnames?: string;
 }
 
-export const Dropdown = ({ label, fieldItems, field, filters }: IProps) => {
+export const Dropdown = ({
+  label,
+  fieldItems,
+  field,
+  classnames,
+  filters,
+}: IProps) => {
   return (
     <select
       onChange={(e) =>
         filters && filters(field as keyof IProject, e.target.value)
       }
-      className="flex items-center rounded-full bg-white px-[14px] py-[9px] text-sm hover:opacity-60"
+      className={`${classnames} flex items-center px-[14px] py-[9px] text-sm hover:opacity-60`}
     >
       <option value="" hidden>
         {label}
