@@ -34,7 +34,7 @@ export const DashboardTasksContainer = () => {
   };
 
   return (
-    <div className="bg-background-light relative h-[400px] rounded-2xl p-[18px] transition-transform hover:translate-y-[-0.05rem] hover:shadow-md">
+    <div className="bg-gray-300/50 relative h-[400px] rounded-2xl p-[18px] transition-transform hover:translate-y-[-0.05rem] hover:shadow-md">
       <h2 className="text-base font-semibold">Today task</h2>
       <div className="pb-3 pt-5">
         <ul className="flex items-center justify-start space-x-9">

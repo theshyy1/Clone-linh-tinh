@@ -5,7 +5,7 @@ import { ISummary } from "../../models/dashboard-modal";
 
 export const DashboardSummaryContainer = () => {
   return (
-    <div className="bg-background-light h-[349px] rounded-2xl p-[18px] pb-[29px] transition-transform hover:translate-y-[-0.05rem] hover:shadow-md">
+    <div className="bg-gray-300/50 h-[349px] rounded-2xl p-[18px] pb-[29px] transition-transform hover:translate-y-[-0.05rem] hover:shadow-md">
       <div className="flex items-center justify-between">
         <h3 className="text-base font-semibold">Project summary</h3>
         <div className="flex items-center space-x-2">

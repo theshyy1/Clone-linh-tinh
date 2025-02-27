@@ -22,6 +22,7 @@ export interface IOverview {
   title: string;
   numbers: string;
   descriptions: string;
+  rate: number;
   icon: JSX.Element;
-  rate: JSX.Element;
+  logoImage: JSX.Element;
 }

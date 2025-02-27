@@ -5,7 +5,7 @@ import { ProgressItem } from "../../components/items/progress-dashboard-item";
 
 export const DashboardProgressContainer = () => {
   return (
-    <div className="bg-background-light h-[349px] rounded-2xl p-[18px] transition-transform hover:translate-y-[-0.05rem] hover:shadow-md">
+    <div className="bg-gray-300/50 h-[349px] rounded-2xl p-[18px] transition-transform hover:translate-y-[-0.05rem] hover:shadow-md">
       <div className="flex items-center justify-between">
         <h3 className="text-base font-semibold">Overall Progress</h3>
         <Dropdown label="All" />

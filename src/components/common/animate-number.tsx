@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 interface IProps {
   targetNumber: number;
-  duration: number;
+  duration?: number;
 }
 
 export const AnimatedNumber = ({ targetNumber, duration = 1000 }: IProps) => {

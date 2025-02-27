@@ -31,16 +31,16 @@ export const Header = () => {
         <input
           type="text"
           placeholder="Search for anything"
-          className="text-text-light rounded-full border-none py-3 pl-5 text-sm outline-none"
+          className="text-text-light bg-gray-300/50 rounded-full border-none py-3 pl-5 text-sm outline-none"
         />
         <div className="mx-2.5 h-12 w-12 rounded-full bg-white" />
-        <article className="flex items-center space-x-1 rounded-full bg-[#00a6eb] px-2">
+        <article className="flex items-center space-x-1 rounded-full bg-[#00a6eb] px-3">
           <div className="pl-1 pr-3 text-white">
             <h2 className="text-sm">Alex meian</h2>
-            <span className="text-white text-sm">Prodcut manager</span>
+            <span className="text-gray-300 text-sm">Prodcut manager</span>
           </div>
           <span className="">
-            <Icon path={mdiChevronDown} size={1} />
+            <Icon path={mdiChevronDown} size={1} color={"white"} />
           </span>
         </article>
       </div>

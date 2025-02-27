@@ -6,7 +6,7 @@ import { DashboardWorkloadContainer } from "../containers/dashboard/dashboard-wo
 
 export const DashboardScreen = () => {
   return (
-    <div className="bg-background-dark overflow-y-auto mx-auto px-4 flex h-full w-full flex-col">
+    <div className="bg-white overflow-y-auto mx-auto px-4 flex h-full w-full flex-col">
       <DashboardOverviewsContainer />
       <div className="grid grid-cols-3 gap-4 md:grid-cols-6 xl:grid-cols-12">
         <div className="col-span-8 space-y-6 pt-8">

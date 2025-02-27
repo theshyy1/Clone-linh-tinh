@@ -31,31 +31,31 @@ export const categories = [
   },
   {
     id: 4,
-    title: "Tables",
-    link: "/tables",
+    title: "User Profile",
+    link: "/user-profile",
     icon: <Icon path={mdiTableCheck} size={0.7} />,
   },
   {
     id: 5,
-    title: "Resource mgnt",
+    title: "Resources",
     link: "/resourcemgnt",
     icon: <Icon path={mdiAlphaMBoxOutline} size={0.7} />,
   },
   {
     id: 6,
-    title: "Group",
+    title: "Groups",
     link: "/group",
     icon: <Icon path={mdiAccountMultipleOutline} size={0.7} />,
   },
   {
     id: 7,
-    title: "Project template",
+    title: "Templates",
     link: "/projecttemplate",
     icon: <Icon path={mdiFolderPlus} size={0.7} />,
   },
   {
     id: 8,
-    title: "Menu settings",
+    title: "Menu Settings",
     link: "/menusettings",
     icon: <Icon path={mdiMenu} size={0.7} />,
   },
@@ -72,8 +72,9 @@ export const overviews = [
     id: 1,
     title: "Total revenue",
     numbers: "$53,00989",
-    descriptions: "12% increase from last month",
-    rate: (
+    descriptions: "increase from last month",
+    rate: 12,
+    icon: (
       <svg
         width="14"
         height="14"
@@ -95,7 +96,7 @@ export const overviews = [
         />
       </svg>
     ),
-    icon: (
+    logoImage: (
       <svg
         width="46"
         height="46"
@@ -135,8 +136,9 @@ export const overviews = [
     id: 2,
     title: "Projects",
     numbers: "95 /100",
-    descriptions: "10% decrease from last month",
-    rate: (
+    descriptions: " decrease from last month",
+    rate: 10,
+    icon: (
       <svg
         width="14"
         height="14"
@@ -158,7 +160,7 @@ export const overviews = [
         />
       </svg>
     ),
-    icon: (
+    logoImage: (
       <svg
         width="46"
         height="46"
@@ -204,8 +206,9 @@ export const overviews = [
     id: 3,
     title: "Time spent",
     numbers: "1022 /1300 Hrs",
-    descriptions: "8% increase from last month",
-    rate: (
+    descriptions: "increase from last month",
+    rate: 8,
+    icon: (
       <svg
         width="14"
         height="14"
@@ -227,7 +230,7 @@ export const overviews = [
         />
       </svg>
     ),
-    icon: (
+    logoImage: (
       <svg
         width="46"
         height="46"
@@ -255,8 +258,9 @@ export const overviews = [
     id: 4,
     title: "Resources",
     numbers: "101 /120",
-    descriptions: "2% increase from last month",
-    rate: (
+    descriptions: "increase from last month",
+    rate: 2,
+    icon: (
       <svg
         width="14"
         height="14"
@@ -278,7 +282,7 @@ export const overviews = [
         />
       </svg>
     ),
-    icon: (
+    logoImage: (
       <svg
         width="46"
         height="46"
