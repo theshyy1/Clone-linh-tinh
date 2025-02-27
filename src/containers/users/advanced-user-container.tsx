@@ -13,10 +13,14 @@ import { Input } from "../../components/common/input";
 import { debounce } from "lodash";
 
 export const AdvancedUserContainer = () => {
-  const { allUsers, setFilteredUsers, setFilterModal } =
-    useContext(UserContext);
+  const {
+    allUsers,
+    numberUsersFocused,
+    deleteUsers,
+    setFilteredUsers,
+    setFilterModal,
+  } = useContext(UserContext);
   const [searchValue, setSearchValue] = useState<string>("");
-  const { numberUsersFocused, deleteUsers } = useContext(UserContext);
 
   const debounceSearch = debounce((value) => {
     const results = allUsers.filter((user) =>
@@ -25,7 +29,7 @@ export const AdvancedUserContainer = () => {
       )
     );
     setFilteredUsers(results);
-  }, 3000);
+  }, 1500);
 
   useEffect(() => {
     debounceSearch(searchValue);
@@ -69,7 +73,7 @@ export const AdvancedUserContainer = () => {
         <Button
           className="rounded-md border border-background-dark hover:text-blue-700 w-[100px] flex-row-reverse"
           icon={<Icon path={mdiFilterCheckOutline} size={0.8} />}
-          onClick={() => setFilterModal(true)}
+          onClick={() => setFilterModal((prev) => !prev)}
         >
           Filter
         </Button>

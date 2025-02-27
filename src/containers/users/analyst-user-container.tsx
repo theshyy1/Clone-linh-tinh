@@ -25,12 +25,14 @@ export const AnalysisUserContainer = () => {
           <div className="grid grid-cols-12 gap-6 items-center">
             <AnalysicUserItem
               classname="col-span-3"
-              label="total users"
               analysisNumbers={{ total: allUsers.length, active: 22 }}
               percentage={Math.ceil(calculatePercentage(allUsers.length, 22))}
-            />
+              duration={1500}
+            >
+              total users
+            </AnalysicUserItem>
+
             <AnalysicUserItem
-              label="active users"
               classname="col-span-3"
               analysisNumbers={{
                 total: allUsers.length,
@@ -42,21 +44,28 @@ export const AnalysisUserContainer = () => {
                   filterStatusUser.active(allUsers).length
                 )
               )}
-            />
+              duration={1500}
+            >
+              active users
+            </AnalysicUserItem>
             <AnalysicUserItem
               classname="col-span-3"
-              label="new/returning"
               analysisNumbers={{ total: 56, active: 48.7 }}
               sign={"%"}
               percentage={2.8}
-            />
+              duration={3000}
+            >
+              new/returning
+            </AnalysicUserItem>
             <AnalysicUserItem
               classname="col-span-3"
-              label="Active members"
               analysisNumbers={{ total: 28, active: 28.6 }}
               sign={"%"}
               percentage={0}
-            />
+              duration={3000}
+            >
+              Active members
+            </AnalysicUserItem>
           </div>
         </div>
       )}

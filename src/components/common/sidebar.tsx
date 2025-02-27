@@ -1,12 +1,12 @@
+import { mdiPlus } from "@mdi/js";
+import Icon from "@mdi/react";
 import { JSX, useContext } from "react";
 import { Link } from "react-router-dom";
 import { logoApp, question } from "../../assets/images";
+import { categories } from "../../assets/static-data/resource";
 import { AppContext } from "../../contexts/dashboard/dashboard-context";
 import { SidebarItem } from "../items/sidebar-item";
 import Popover from "./popover";
-import { categories } from "../../assets/static-data/resource";
-import Icon from "@mdi/react";
-import { mdiArrowCollapse, mdiPlus } from "@mdi/js";
 
 export interface ICategory {
   id: number;
@@ -15,11 +15,10 @@ export interface ICategory {
   link: string;
 }
 export const Sidebar = () => {
-  const { isCollapsed, setIsCollapsed } = useContext(AppContext);
-  const handleCollapsed = () => setIsCollapsed((prev) => !prev);
+  const { isCollapsed } = useContext(AppContext);
   return (
     <aside
-      className={`relative h-full ${isCollapsed ? "w-[260px] pl-[30px] pr-[46px]" : "flex w-[100px] flex-col items-center"} truncate bg-black text-white transition-all duration-500`}
+      className={`relative h-full ${isCollapsed ? "w-[260px] pl-[30px] pr-[46px]" : "flex w-[100px] flex-col items-center"} truncate bg-white text-black border-r transition-all duration-500`}
     >
       <Popover
         renderProp={
@@ -33,13 +32,11 @@ export const Sidebar = () => {
         <Link to="/" className="flex items-center pb-4 pt-8">
           <span className="">{logoApp}</span>
           {isCollapsed && (
-            <span className="pl-2 text-2xl font-bold text-white">Promage</span>
+            <span className="pl-2 text-2xl font-bold text-black">Promage</span>
           )}
         </Link>
       </Popover>
-      <div className="flex w-full justify-center" onClick={handleCollapsed}>
-        <Icon path={mdiArrowCollapse} size={1} color="white" />
-      </div>
+
       <Popover
         renderProp={
           !isCollapsed && (
@@ -50,7 +47,7 @@ export const Sidebar = () => {
         }
       >
         <button
-          className={`${isCollapsed && "w-full"} mb-[60px] mt-[78px] flex cursor-pointer items-center rounded-full bg-white px-2 py-1 text-black hover:opacity-85`}
+          className={`${isCollapsed && "w-full"} mb-[60px] mt-[78px] flex cursor-pointer items-center rounded-full bg-gray-300 px-2 py-1 text-black hover:opacity-85`}
         >
           <Icon path={mdiPlus} size={1} />
           {isCollapsed && (

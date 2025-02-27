@@ -1,8 +1,10 @@
-import { mdiChevronRight } from "@mdi/js";
 import Icon from "@mdi/react";
+import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
 import { Button } from "../../components/common/button";
 import { FormUserValues } from "../../models/user-modal";
 import { FormikErrors, FormikTouched } from "formik";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/users/users-context";
 
 interface IProps {
   nextStep: () => void;
@@ -19,6 +21,7 @@ export const Step1Form = ({
   errors,
   touched,
 }: IProps) => {
+  const { setFormModal } = useContext(UserContext);
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-md border rounded-xl">
       <div className="py-6 border-b border-gray-400">
@@ -140,7 +143,14 @@ export const Step1Form = ({
           </div>
         </div>
       </div>
-      <div className="flex justify-end pt-5">
+      <div className="flex justify-between items-center pt-5">
+        <Button
+          onClick={() => setFormModal(false)}
+          icon={<Icon path={mdiChevronLeft} size={1} />}
+          className="px-6 py-2 text-blue-600 rounded-md hover:bg-blue-700 hover:text-white flex-row-reverse"
+        >
+          Previous
+        </Button>
         <Button
           type="button"
           onClick={nextStep}
