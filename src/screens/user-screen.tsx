@@ -1,5 +1,4 @@
 import { AnalysisUserContainer } from "../containers/users/analyst-user-container";
-import { FooterUserContainer } from "../containers/users/footer-user-container";
 import { FormUserContainer } from "../containers/users/form-user-container";
 import { HeadingUserContainer } from "../containers/users/heading-user-container";
 import { ListUserContainer } from "../containers/users/list-user-container";
@@ -13,7 +12,6 @@ export const UserScreen = () => {
         <HeadingUserContainer />
         <AnalysisUserContainer />
         <ListUserContainer />
-        <FooterUserContainer />
       </div>
     </UserContextProvider>
   );

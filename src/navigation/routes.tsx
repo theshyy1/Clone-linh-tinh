@@ -5,6 +5,7 @@ import { DashboardScreen } from "../screens/dashboard-screen";
 import { NotFoundScreen } from "../screens/notfound-screen";
 import { ProjectScreen } from "../screens/projects-screen";
 import { UserScreen } from "../screens/user-screen";
+import { UserProfileScreen } from "../screens/user-profile-screen";
 
 export const Router = () => {
   return (
@@ -35,6 +36,7 @@ export const Router = () => {
             </Suspense>
           }
         />
+        <Route path="user-profile" element={<UserProfileScreen />} />
       </Route>
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>

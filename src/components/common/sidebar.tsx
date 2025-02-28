@@ -18,7 +18,7 @@ export const Sidebar = () => {
   const { isCollapsed } = useContext(AppContext);
   return (
     <aside
-      className={`relative h-full ${isCollapsed ? "w-[260px] pl-[30px] pr-[46px]" : "flex w-[100px] flex-col items-center"} truncate bg-white text-black border-r transition-all duration-500`}
+      className={`relative h-full ${isCollapsed ? "w-[15%] pl-[30px] pr-[46px]" : "flex w-[6%]"} flex-col items-center truncate bg-white text-black border-r transition-all duration-500`}
     >
       <Popover
         renderProp={
@@ -40,7 +40,7 @@ export const Sidebar = () => {
       <Popover
         renderProp={
           !isCollapsed && (
-            <div className="border-gray-200 relative z-[7] rounded-md border bg-white px-3 py-1 text-black shadow-sm">
+            <div className="relative rounded-full border border-none bg-white px-3 py-1 text-sm text-black shadow-md">
               Create New
             </div>
           )

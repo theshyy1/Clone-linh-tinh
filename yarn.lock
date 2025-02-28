@@ -635,6 +635,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdi/light-js@npm:^0.2.63":
+  version: 0.2.63
+  resolution: "@mdi/light-js@npm:0.2.63"
+  checksum: 4b950e8e86159489fe918ef84cc89c352d133c1c02c139e265fe73ba26da3681cf3d8fbb8e77b8fc08f01e5a392856fe58e71fbc0fb3d394f9818cda3e902321
+  languageName: node
+  linkType: hard
+
 "@mdi/react@npm:^1.6.1":
   version: 1.6.1
   resolution: "@mdi/react@npm:1.6.1"
@@ -2895,6 +2902,7 @@ __metadata:
     "@eslint/js": "npm:^9.19.0"
     "@floating-ui/react-dom-interactions": "npm:^0.13.3"
     "@mdi/js": "npm:^7.4.47"
+    "@mdi/light-js": "npm:^0.2.63"
     "@mdi/react": "npm:^1.6.1"
     "@types/lodash": "npm:^4"
     "@types/react": "npm:^19.0.10"

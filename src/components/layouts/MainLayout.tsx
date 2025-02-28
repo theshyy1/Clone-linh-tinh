@@ -1,24 +1,17 @@
 import { Outlet } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import { Header } from "../common/header";
 import { Sidebar } from "../common/sidebar";
 
 export const MainLayout = () => {
   return (
-    <div className="relative flex h-screen w-full items-center">
+    <div className="relative flex h-screen w-full items-center overflow-hidden">
       <Sidebar />
-
-      <div className="h-full w-full overflow-hidden">
+      <div className="h-full w-full">
         <Header />
         <div className="h-full w-full">
           <Outlet />
         </div>
       </div>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={1000}
-        theme="colored"
-      />
     </div>
   );
 };

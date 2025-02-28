@@ -53,7 +53,7 @@ export const AnalysisUserContainer = () => {
               analysisNumbers={{ total: 56, active: 48.7 }}
               sign={"%"}
               percentage={2.8}
-              duration={3000}
+              duration={2000}
             >
               new/returning
             </AnalysicUserItem>
@@ -62,7 +62,7 @@ export const AnalysisUserContainer = () => {
               analysisNumbers={{ total: 28, active: 28.6 }}
               sign={"%"}
               percentage={0}
-              duration={3000}
+              duration={2000}
             >
               Active members
             </AnalysicUserItem>

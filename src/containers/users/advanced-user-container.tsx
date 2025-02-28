@@ -29,7 +29,7 @@ export const AdvancedUserContainer = () => {
       )
     );
     setFilteredUsers(results);
-  }, 1500);
+  }, 1000);
 
   useEffect(() => {
     debounceSearch(searchValue);

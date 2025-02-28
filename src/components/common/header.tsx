@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <header className="bg-white border-b mx-auto flex h-24 items-center justify-between px-4">
       <div
-        className={`absolute  ${isCollapsed ? "left-[12.5%]" : "left-[75px]"}  top-7 w-10 z-100 h-10 rounded-full border bg-white transition-all duration-500 `}
+        className={`absolute  ${isCollapsed ? "left-[12.5%]" : "left-[4.5%]"} top-7 w-10 h-10 rounded-full border bg-white transition-all duration-500`}
         onClick={() => setIsCollapsed((prev) => !prev)}
       >
         <span className="w-full h-full flex items-center justify-center">
