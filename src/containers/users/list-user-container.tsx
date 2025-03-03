@@ -11,7 +11,7 @@ export const ListUserContainer = () => {
     <>
       {!formModal && (
         <div className="py-6 px-8 w-full ">
-          <div className="relative border rounded-xl h-full border-text-dark">
+          <div className="relative border rounded-xl border-text-dark">
             <AdvancedUserContainer />
             <FilterUserContainer />
             <MainListUserContainer />

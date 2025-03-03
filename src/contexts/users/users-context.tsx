@@ -37,11 +37,6 @@ export const UserContextProvider = ({ children }: { children: ReactNode }) => {
   const [filteredUsers, setFilteredUsers] = useState<IUser[]>([...allUsers]);
   const [filterModal, setFilterModal] = useState<boolean>(false);
   const [formModal, setFormModal] = useState<boolean>(false);
-
-  useEffect(() => {
-    console.log(allUsers, filteredUsers);
-  }, [allUsers, filteredUsers]);
-
   const addUser = (user: IUser) => {
     setAllUsers((prev) => [user, ...prev]);
     setFilteredUsers((prev) => [user, ...prev]);

@@ -9,61 +9,81 @@ import {
   mdiViewDashboard,
 } from "@mdi/js";
 import Icon from "@mdi/react";
+import { JSX } from "react";
+
+export interface ICategory {
+  id: number;
+  title: string;
+  icon: JSX.Element;
+  childrens?: {
+    id: number;
+    childLink: string;
+    childName: string;
+  }[];
+}
 
 export const categories = [
   {
     id: 1,
     title: "Dashboard",
-    link: "/",
     icon: <Icon path={mdiViewDashboard} size={0.7} />,
+    childrens: [{ id: 1, childLink: "/", childName: "Dashboard" }],
   },
   {
     id: 2,
     title: "Projects",
-    link: "/projects",
     icon: <Icon path={mdiLayersTriple} size={0.7} />,
+    childrens: [{ id: 1, childLink: "/projects", childName: "Projects" }],
   },
   {
     id: 3,
     title: "Users",
-    link: "/users",
     icon: <Icon path={mdiAccountMultipleOutline} size={0.7} />,
+    childrens: [{ id: 1, childLink: "/users", childName: "Home Users" }],
   },
   {
     id: 4,
     title: "User Profile",
-    link: "/user-profile",
     icon: <Icon path={mdiTableCheck} size={0.7} />,
+    childrens: [
+      { id: 1, childLink: "/user-profile", childName: "Home" },
+      { id: 2, childLink: "/user-profile/teams", childName: "Teams" },
+      {
+        id: 3,
+        childLink: "/user-profile/connections",
+        childName: "Connections",
+      },
+    ],
   },
   {
     id: 5,
     title: "Resources",
-    link: "/resourcemgnt",
     icon: <Icon path={mdiAlphaMBoxOutline} size={0.7} />,
+    childrens: [],
   },
   {
     id: 6,
     title: "Groups",
-    link: "/group",
     icon: <Icon path={mdiAccountMultipleOutline} size={0.7} />,
+    childrens: [],
   },
   {
     id: 7,
     title: "Templates",
-    link: "/projecttemplate",
     icon: <Icon path={mdiFolderPlus} size={0.7} />,
+    childrens: [],
   },
   {
     id: 8,
     title: "Menu Settings",
-    link: "/menusettings",
     icon: <Icon path={mdiMenu} size={0.7} />,
+    childrens: [],
   },
   {
     id: 9,
     title: "Enter New",
-    link: "/enternew",
     icon: <Icon path={mdiNewBox} size={0.7} />,
+    childrens: [],
   },
 ];
 

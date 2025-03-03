@@ -7,7 +7,7 @@ import { UserContextProvider } from "../contexts/users/users-context";
 export const UserScreen = () => {
   return (
     <UserContextProvider>
-      <div className="relative h-[800px] pb-[100px] overflow-auto">
+      <div className="relative h-full">
         <FormUserContainer />
         <HeadingUserContainer />
         <AnalysisUserContainer />

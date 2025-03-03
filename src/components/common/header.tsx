@@ -8,24 +8,33 @@ import { useContext } from "react";
 import { getTitleHeader } from "../../common/common";
 import { ProjectContext } from "../../contexts/project/list-project-context";
 import { AppContext } from "../../contexts/dashboard/dashboard-context";
+import Popover from "./popover";
 
 export const Header = () => {
   const { titleHeader } = useContext(ProjectContext);
   const { setIsCollapsed, isCollapsed } = useContext(AppContext);
   return (
     <header className="bg-white border-b mx-auto flex h-24 items-center justify-between px-4">
-      <div
-        className={`absolute  ${isCollapsed ? "left-[12.5%]" : "left-[4.5%]"} top-7 w-10 h-10 rounded-full border bg-white transition-all duration-500`}
-        onClick={() => setIsCollapsed((prev) => !prev)}
+      <Popover
+        renderProp={
+          <span className="px-2 py-1 rounded-lg bg-black text-white">
+            {isCollapsed ? "Expand" : "Collapse"}
+          </span>
+        }
       >
-        <span className="w-full h-full flex items-center justify-center">
-          <Icon
-            path={!isCollapsed ? mdiArrowCollapseRight : mdiArrowCollapseLeft}
-            size={0.7}
-            color="black"
-          />
-        </span>
-      </div>
+        <div
+          className={`absolute  ${!isCollapsed ? "left-[12%]" : "left-[4.5%]"} top-7 w-10 h-10 rounded-full border bg-white transition-all duration-500`}
+          onClick={() => setIsCollapsed((prev) => !prev)}
+        >
+          <span className="w-full h-full flex items-center justify-center">
+            <Icon
+              path={isCollapsed ? mdiArrowCollapseRight : mdiArrowCollapseLeft}
+              size={0.7}
+              color="black"
+            />
+          </span>
+        </div>
+      </Popover>
       <h3 className="text-2xl font-semibold">{getTitleHeader(titleHeader)}</h3>
       <div className="flex items-center">
         <input

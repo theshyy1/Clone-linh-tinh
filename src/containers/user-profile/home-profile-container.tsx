@@ -1,9 +1,9 @@
 import { SidebarProfile } from "./sidebar-profile";
 import { TimelineProfile } from "./timeline-profile";
 
-export const BodyProfileContainer = () => {
+export const HomeProfileContainer = () => {
   return (
-    <div className="w-full h-full mt-10">
+    <div className="h-full mt-10">
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-4">
           <SidebarProfile />

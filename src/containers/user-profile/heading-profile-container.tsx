@@ -9,14 +9,17 @@ import { mdilCheck } from "@mdi/light-js";
 
 export const HeadingProfileContainer = () => {
   return (
-    <div className="pt-8 border-b border-gray-300">
+    <div className="pt-8">
       <div className="h-[150px] bg-blue-300 rounded-xl w-full" />
-      <div className="flex flex-col place-items-center space-y-3  translate-y-[-90px]">
-        <img
-          src="https://picsum.photos/120/120"
-          alt=""
-          className="object-contain rounded-full border-4"
-        />
+      <div className="flex flex-col place-items-center space-y-3 translate-y-[-110px]">
+        <div className="relative">
+          <img
+            src="https://picsum.photos/120/120"
+            alt=""
+            className="object-contain rounded-full border-4"
+          />
+          <span className="absolute bottom-3 right-3 w-5 h-5 rounded-full bg-[#00c9a7] block border-2 " />
+        </div>
         <div className="flex items-center text-3xl font-bold space-x-3">
           <span>Ella Lauda</span>
           <span className="flex justify-center h-7 w-7 rounded-full bg-blue-600">

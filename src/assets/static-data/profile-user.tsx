@@ -63,3 +63,64 @@ export const projectsData = [
     spentTime: "8:08",
   },
 ];
+
+export const groupTeams = [
+  {
+    id: 1,
+    nameTeams: "#digitalmarketing",
+    description:
+      "Our group promotes and sells products and services by leveraging online marketing tactics",
+    industry: "Marketing team",
+    rated: 4.4,
+    members: 4,
+  },
+  {
+    id: 2,
+    nameTeams: "#ethereum",
+    description: "Focusing on innovative and disruptive business models",
+    industry: "Blockchain",
+    rated: 4,
+    members: 3,
+  },
+  {
+    id: 3,
+    nameTeams: "#conference",
+    description: "Online meeting services group",
+    industry: "Marketing team",
+    rated: 4.2,
+    members: 4,
+  },
+  {
+    id: 4,
+    nameTeams: "#supportteam",
+    description: "Keep in touch and stay productive with us",
+    industry: "Customer service",
+    rated: 3.5,
+    members: 2,
+  },
+  {
+    id: 5,
+    nameTeams: "#invoices",
+    description:
+      "This group serves online money transfers as an electronic alternative to paper methods",
+    industry: "Online payment",
+    rated: 4,
+    members: 4,
+  },
+  {
+    id: 6,
+    nameTeams: "#payments",
+    description: "Our responsibility to manage the money in this organization",
+    industry: "Finance",
+    rated: 5,
+    members: 4,
+  },
+  {
+    id: 7,
+    nameTeams: "#event",
+    description: "Because we love to know what's going on & share great ideas",
+    industry: "Organizers",
+    rated: 3,
+    members: 3,
+  },
+];

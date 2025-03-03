@@ -1,6 +1,7 @@
 import { mdiDotsVertical } from "@mdi/js";
 import { mdilChevronRight } from "@mdi/light-js";
 import Icon from "@mdi/react";
+import { Link, useLocation } from "react-router-dom";
 import {
   connectionsData,
   projectsData,
@@ -10,110 +11,16 @@ import { CustomProfileComponent } from "../../components/customs/custom-profile-
 import { ConnectProfileItem } from "../../components/items/connects-profile-item";
 import { ProjectProfileItem } from "../../components/items/projects-profile-item";
 import { TeamProfileItem } from "../../components/items/teams-profile-item";
+import { ActivityTimelineProfileContainer } from "./activiy-timeline-profile-container";
 
 export const TimelineProfile = () => {
   return (
-    <div className="w-full h-full pb-[100px]">
+    <div className="">
       <CustomProfileComponent
         title="Activity stream"
         icon={<Icon path={mdiDotsVertical} size={0.8} />}
       >
-        <div className="h-[560px] overflow-auto px-10 py-4">
-          <div className="flex flex-col">
-            <span className="text-black font-semibold pb-2">
-              New card styles added
-            </span>
-            <span className="text-text-light text-sm">
-              Added 3 card to{" "}
-              <a href="" className="inline-block text-blue-600">
-                Payments
-              </a>
-            </span>
-            <div className="p-3 border rounded-xl flex justify-between items-center overflow-hidden">
-              <img
-                src="https://picsum.photos/200/130"
-                alt=""
-                className="object-contain rounded-xl"
-              />
-              <img
-                src="https://picsum.photos/200/130"
-                alt=""
-                className="object-contain rounded-xl"
-              />
-              <img
-                src="https://picsum.photos/200/130"
-                alt=""
-                className="object-contain rounded-xl"
-              />
-            </div>
-            <span className="text-sm text-text-light">MAY 12</span>
-          </div>
-          <div className="flex flex-col mt-10">
-            <span className="text-black font-semibold pb-2">
-              Dean added a new team member
-            </span>
-            <span className="text-text-light text-sm">
-              Added a new member to Front Dashboard
-            </span>
-            <span className="text-sm text-text-light">MAY 15</span>
-          </div>
-          <div className="flex flex-col mt-10">
-            <span className="text-black font-semibold pb-2">
-              Project status updated
-            </span>
-            <span className="text-text-light text-sm">
-              Marked Fr-3 as "In progress"
-            </span>
-            <span className="text-sm text-text-light">Apr 29</span>
-          </div>
-          <div className="flex flex-col mt-10">
-            <span className="text-black font-semibold pb-2">
-              Dean added a new team member
-            </span>
-            <span className="text-text-light text-sm">
-              Added a new member to Front Dashboard
-            </span>
-            <span className="text-sm text-text-light">MAY 15</span>
-          </div>
-          <div className="flex flex-col mt-10">
-            <span className="text-black font-semibold pb-2">
-              Project status updated
-            </span>
-            <span className="text-text-light text-sm">
-              Marked Fr-3 as "In progress"
-            </span>
-            <span className="text-sm text-text-light">Apr 29</span>
-          </div>
-          <div className="flex flex-col mt-10">
-            <span className="text-black font-semibold pb-2">
-              New card styles added
-            </span>
-            <span className="text-text-light text-sm">
-              Added 3 card to{" "}
-              <a href="" className="inline-block text-blue-600">
-                Payments
-              </a>
-            </span>
-            <div className="p-3 border rounded-xl flex justify-between items-center overflow-hidden">
-              <img
-                src="https://picsum.photos/200/130"
-                alt=""
-                className="object-contain rounded-xl"
-              />
-              <img
-                src="https://picsum.photos/200/130"
-                alt=""
-                className="object-contain rounded-xl"
-              />
-              <img
-                src="https://picsum.photos/200/130"
-                alt=""
-                className="object-contain rounded-xl"
-              />
-            </div>
-            <span className="text-sm text-text-light">MAY 12</span>
-          </div>
-        </div>
+        <ActivityTimelineProfileContainer />
         <div className="border-t p-5 text-blue-600 hover:text-blue-700 cursor-pointer font-semibold block">
           View more
         </div>
@@ -126,10 +33,13 @@ export const TimelineProfile = () => {
                 <ConnectProfileItem key={user.id} connecter={user} />
               ))}
             </div>
-            <span className="cursor-pointer flex justify-center items-center p-5 hover:text-blue-700 text-sm text-text-light border-t">
+            <Link
+              to="/user-profile/connections"
+              className="cursor-pointer flex justify-center items-center p-5 hover:text-blue-700 text-sm text-text-light border-t"
+            >
               View all connections
               <Icon path={mdilChevronRight} size={1} />
-            </span>
+            </Link>
           </CustomProfileComponent>
         </div>
         <div className="col-span-6">
@@ -137,10 +47,13 @@ export const TimelineProfile = () => {
             {teamsData.map((team) => (
               <TeamProfileItem key={team.id} team={team} />
             ))}
-            <span className="cursor-pointer flex items-center justify-center p-5 hover:text-blue-700 text-sm text-text-light border-t">
+            <Link
+              to="/user-profile/teams"
+              className="cursor-pointer flex items-center justify-center p-5 hover:text-blue-700 text-sm text-text-light border-t"
+            >
               View all teams
               <Icon path={mdilChevronRight} size={1} />
-            </span>
+            </Link>
           </CustomProfileComponent>
         </div>
       </div>

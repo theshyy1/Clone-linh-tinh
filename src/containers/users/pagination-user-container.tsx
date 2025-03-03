@@ -6,7 +6,7 @@ import { Button } from "../../components/common/button";
 export const PaginationUserContainer = () => {
   const { allUsers, setFilteredUsers } = useContext(UserContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
 
   const totalPages = Math.ceil(allUsers.length / itemsPerPage);
 
